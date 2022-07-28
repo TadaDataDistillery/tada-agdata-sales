@@ -1,0 +1,6 @@
+pylint
+black
+coverage
+pycodestyle
+mypy
+isort

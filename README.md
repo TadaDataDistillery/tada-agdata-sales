@@ -34,4 +34,8 @@ lambdas.settings.sales_report_handler
 lambdas.settings.grower_extract_handler
 ```
 
+The `awswrangler` dependency may be too large for a standard zip install within a Lambda - if so, the optimized layer release zip can be used intead from here: https://github.com/awslabs/aws-data-wrangler/releases
+
 File names are currently hardcoded within `lambdas/handler.py` but these can moved into configurable environment variables if required in the future.
+
+Invocation can be manual initially and will expect correctly named files in the location specified by environment variables. This can be updated in the future when/if necessary.

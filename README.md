@@ -1,4 +1,4 @@
-# AgData Sales Data
+# AgData Weekly Sales Report
 
 ## Development
 
@@ -25,6 +25,13 @@ RAW_BUCKET  # bucket storing raw xlsx files
 RAW_PREFIX  # path within raw bucket
 OUTPUT_BUCKET  # bucket to store output datasets
 OUTPUT_PREFIX  # path within output bucket
+```
+
+The following handlers are used:
+
+```
+lambdas.settings.sales_report_handler
+lambdas.settings.grower_extract_handler
 ```
 
 File names are currently hardcoded within `lambdas/handler.py` but these can moved into configurable environment variables if required in the future.

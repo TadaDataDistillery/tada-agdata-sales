@@ -25,6 +25,7 @@ RAW_BUCKET  # bucket storing raw xlsx files
 RAW_PREFIX  # path within raw bucket
 OUTPUT_BUCKET  # bucket to store output datasets
 OUTPUT_PREFIX  # path within output bucket
+STAGE  # dev, prod, etc.
 ```
 
 The following handlers are used:

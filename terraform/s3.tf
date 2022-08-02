@@ -1,7 +1,7 @@
 module "tada_agdata_sales_app_s3" {
   source = "terraform-aws-modules/s3-bucket/aws"
 
-  bucket = local.tada_agdata_sales_s3
+  bucket = local.sales_report_lambda_s3
   acl    = "private"
 
   versioning = {
@@ -9,6 +9,6 @@ module "tada_agdata_sales_app_s3" {
   }
   
   tags = merge(local.common_tags, tomap({
-    "Name" = local.tada_agdata_sales_s3
+    "Name" = local.sales_report_lambda_s3
   }))
 }

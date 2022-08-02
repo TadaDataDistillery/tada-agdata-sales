@@ -14,8 +14,8 @@ resource "aws_iam_policy" "lambda_agdata_sales_iam_policy" {
         ]
         Effect   = "Allow"
         Resource = [
-          "arn:aws:s3:::${var.tada_agdata_sales_s3}",
-          "arn:aws:s3:::${var.tada_agdata_sales_s3}/*"
+          "arn:aws:s3:::${var.sales_report_lambda_s3}",
+          "arn:aws:s3:::${var.sales_report_lambda_s3}/*"
         ]
       },
     ]

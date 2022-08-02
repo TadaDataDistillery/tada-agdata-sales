@@ -10,5 +10,5 @@ variable "common_tags" {
 variable "project" {
 }
 
-variable "tada_agdata_sales_s3" {
+variable "sales_report_lambda_s3" {
 }

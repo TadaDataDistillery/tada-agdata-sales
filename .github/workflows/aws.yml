@@ -29,4 +29,4 @@ jobs:
       # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
       # Checks that all Terraform configuration files adhere to a canonical format
       - name: Terraform plan + apply
-        run: cd terraform && bash terraform_exec.sh 1
+        run: bash terraform_exec.sh 1

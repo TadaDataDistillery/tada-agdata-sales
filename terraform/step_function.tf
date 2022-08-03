@@ -82,6 +82,5 @@ module "step_function" {
         module.agdata_grower_extract_lambda.lambda_function_arn
       ]
     }
-    tags = local.common_tags
   }
 }

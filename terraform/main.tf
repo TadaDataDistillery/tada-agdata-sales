@@ -9,7 +9,7 @@ locals{
   image_data_version = "image_${local.image_major_version}.${local.image_minor_version}.${local.image_patch_version}"
   ecr_address        = format("%v.dkr.ecr.%v.amazonaws.com", data.aws_caller_identity.current.account_id, data.aws_region.current.name)
   base_ecr_url       = "${local.ecr_address}/${local.project}-lambda-ecr-${var.env}"
-  dataset_s3         = "${var.project}-dataset-bucket-${var.env}"
+  dataset_s3         = "${local.project}-dataset-bucket-${var.env}"
   # Glue Settings
   dataset_glue_output_prefix = "${var.project}-glue-output-${var.env}"
   # Lambda settings

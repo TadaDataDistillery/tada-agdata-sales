@@ -82,8 +82,6 @@ module "step_function" {
         module.agdata_grower_extract_lambda.lambda_function_arn
       ]
     }
-    tags = merge(local.common_tags, tomap({
-    "Name" = "${local.project}-main-${var.env}"
-  }))
+    tags = local.common_tags
   }
 }

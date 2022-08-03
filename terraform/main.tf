@@ -12,11 +12,16 @@ locals{
   base_ecr_url       = "${local.ecr_address}/${local.project}-lambda-ecr-${var.env}"
   
   # Lambda Configuration
-  sales_report_lambda_name = "${local.project}-report"
-  sales_report_lambda_s3   = "${local.sales_report_lambda_name}-app-${var.env}"
+  sales_report_lambda_name          = "${local.project}-report"
+  sales_report_lambda_s3            = "${local.sales_report_lambda_name}-app-${var.env}"
   sales_report_lambda_input_prefix  = "/raw"
   sales_report_lambda_output_prefix = "/processed"
-  
+  grower_extract_lambda_name          = "${local.project}-growers-extract"
+  grower_extract_lambda_s3            = "${local.grower_extract_lambda_name}-app-${var.env}"
+  grower_extract_lambda_input_prefix  = "/raw"
+  grower_extract_lambda_output_prefix = "/processed"
+
+
   # Global tagging defaults
   common_tags = {
     Project     = local.project

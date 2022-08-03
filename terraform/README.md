@@ -14,7 +14,7 @@ Declare the environment and primary region that you will be deploying into.
 ```bash
 export ENV="sandbox"
 export AWS_REGION="us-east-1"
-export PROJECT="data-distillery"
+export PROJECT="tada-agdata-sales"
 ```
 
 ## Deployment

@@ -7,6 +7,8 @@ locals{
   sales_report_lambda_s3 = "${local.sales_report_lambda_name}-app-${var.env}"
   sales_report_lambda_input_prefix = "/input"
   sales_report_lambda_output_prefix = "/output"
+  base_ecr_url = ""
+  image_data_version = ""
 
   common_tags = {
     Project     = local.project
@@ -15,7 +17,6 @@ locals{
     Terraform   = true
     Owner       = var.owner_tag
   } 
-  
 }
 
 module security {

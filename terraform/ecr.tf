@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "lambda_ecr" {
-  name = "${var.project}-lambda-ecr-${var.env}"
+  name = "${local.project}-lambda-ecr-${var.env}"
 }
 
 #resource "null_resource" "image_build" {

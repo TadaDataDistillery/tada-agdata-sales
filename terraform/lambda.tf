@@ -1,6 +1,6 @@
 resource "aws_iam_policy" "agdata_sales_lambda_iam_policy" {
-  name        = "${var.project}-lambda-iam-policy-${var.env}"
-  description = "${var.project} policy for AWS Lambda"
+  name        = "${local.project}-lambda-iam-policy-${var.env}"
+  description = "${local.project} policy for AWS Lambda"
 
   policy = jsonencode({
     Version = "2012-10-17"
@@ -45,7 +45,7 @@ resource "aws_iam_policy" "agdata_sales_lambda_iam_policy" {
 #  environment_variables = {
 #    RAW_PREFIX    = "${var.raw_data_path}"
 #    OUTPUT_PREFIX = "${var.output_data_path}"
-#    RAW_BUCKET    = "${var.project}-angus"
+#    RAW_BUCKET    = "${local.project}-angus"
 #    OUTPUT_BUCKET = "${local.output_bucket}"
 #    STAGE         = "${var.env}"
 #  }

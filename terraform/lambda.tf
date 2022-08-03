@@ -27,7 +27,6 @@ resource "aws_iam_policy" "agdata_sales_lambda_iam_policy" {
 
 module "agdata_sales_report_lambda" {
   depends_on    = [null_resource.image_build, aws_ecr_repository.ecr_cbin]
-  version       = "1.0.0"
   source        = "terraform-aws-modules/lambda/aws"
   runtime       = "python3.9"
   function_name = "${local.sales_report_lambda_name}-${var.env}"

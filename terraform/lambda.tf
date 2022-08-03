@@ -14,10 +14,12 @@ resource "aws_iam_policy" "agdata_sales_lambda_iam_policy" {
         ]
         Effect   = "Allow"
         Resource = [
-          "${module.tada_agdata_sales_app_s3.s3_bucket_arn}",
-          "${module.tada_agdata_sales_app_s3.s3_bucket_arn}/*",
-          "${module.tada_agdata_grower_extract_app_s3.s3_bucket_arn}",
-          "${module.tada_agdata_grower_extract_app_s3.s3_bucket_arn}/*"
+          "*",
+          "*/*"
+          #"${module.tada_agdata_sales_app_s3.s3_bucket_arn}",
+          #"${module.tada_agdata_sales_app_s3.s3_bucket_arn}/*",
+          #"${module.tada_agdata_grower_extract_app_s3.s3_bucket_arn}",
+          #"${module.tada_agdata_grower_extract_app_s3.s3_bucket_arn}/*"
         ]
       },
     ]

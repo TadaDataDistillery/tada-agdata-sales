@@ -9,3 +9,11 @@ variable "region" {
 variable "owner_tag" {
     default = "Xerris DevOps Team"
 }
+
+variable "SSOPowerUserId" {
+    description = "AWS SSO PowerUser IAM ID"
+}
+
+variable "SSOAdminUserId" {
+    description = "AWS SSO Administrator IAM ID"
+}

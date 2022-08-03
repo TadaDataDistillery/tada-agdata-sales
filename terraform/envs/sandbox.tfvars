@@ -1,3 +1,5 @@
 env = "sandbox"
 region = "us-east-1"
 owner_tag = "Xerris DevOps Team"
+SSOPowerUserId = "d7f0b8e7f73cfd29"
+SSOAdminUserId = "813c21dab071a7f9"

@@ -78,8 +78,8 @@ module "step_function" {
   service_integrations = {
     lambda = {
       lambda = [
-        module.cbin_sales_report_lambda.lambda_function_arn,
-        module.cbin_grower_extract_lambda.lambda_function_arn
+        module.agdata_sales_report_lambda.lambda_function_arn,
+        module.agdata_grower_extract_lambda.lambda_function_arn
       ]
     }
     tags = merge(local.common_tags, tomap({

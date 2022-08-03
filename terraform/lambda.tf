@@ -42,10 +42,10 @@ module "agdata_sales_report_lambda" {
   policy = aws_iam_policy.agdata_sales_lambda_iam_policy.id
 
   environment_variables = {
-    RAW_PREFIX    = "${var.raw_data_path}"
-    OUTPUT_PREFIX = "${var.output_data_path}"
-    RAW_BUCKET    = "${local.project}-angus"
-    OUTPUT_BUCKET = "${local.output_bucket}"
+    RAW_BUCKET    = "${local.sales_report_lambda_s3}"
+    RAW_PREFIX    = "${local.sales_report_lambda_input_prefix}"
+    OUTPUT_BUCKET = "${local.sales_report_lambda_s3}"
+    OUTPUT_PREFIX = "${local.sales_report_lambda_output_prefix}"
     STAGE         = "${var.env}"
   }
   tags = merge(local.common_tags, tomap({

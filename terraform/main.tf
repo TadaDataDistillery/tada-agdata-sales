@@ -11,7 +11,7 @@ locals{
   base_ecr_url       = "${local.ecr_address}/${local.project}-lambda-ecr-${var.env}"
   dataset_s3         = "${local.project}-dataset-bucket-${var.env}"
   # Glue Settings
-  dataset_glue_output_prefix = "${var.project}-glue-output-${var.env}"
+  dataset_glue_output_prefix = "${local.project}-glue-output-${var.env}"
   # Lambda settings
   sales_report_lambda_name          = "${local.project}-report"
   sales_report_lambda_s3            = "${local.sales_report_lambda_name}-app-${var.env}"

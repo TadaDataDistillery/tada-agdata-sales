@@ -26,12 +26,3 @@ locals{
     Owner       = var.owner_tag
   } 
 }
-
-module security {
-  source = "./modules/security"
-  env = var.env
-  region = var.region
-  common_tags = local.common_tags
-  project = local.project
-  sales_report_lambda_s3 = local.sales_report_lambda_s3
-}

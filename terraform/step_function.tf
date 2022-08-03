@@ -72,7 +72,7 @@ EOF
 module "step_function" {
   source = "terraform-aws-modules/step-functions/aws"
 
-  name       = "${var.project}-main-${var.env}"
+  name       = "${local.project}-main-${var.env}"
   definition = local.step_function_definition
 
   service_integrations = {
@@ -83,7 +83,7 @@ module "step_function" {
       ]
     }
     tags = merge(local.common_tags, tomap({
-    "Name" = "${var.project}-main-${var.env}"
+    "Name" = "${local.project}-main-${var.env}"
   }))
   }
 }

@@ -8,7 +8,7 @@ locals{
   image_minor_version = "1"
   image_patch_version = format("%s-%s-%s", "local", local.image_major_version, local.image_minor_version)
   ecr_address        = format("%v.dkr.ecr.%v.amazonaws.com", data.aws_caller_identity.current.account_id, data.aws_region.current.name)
-  base_ecr_url       = "${local.ecr_address}/${local.project}_ecr_lambda_${var.env}"
+  base_ecr_url       = "${local.ecr_address}/${local.project}-lambda-ecr-${var.env}"
   image_data_version = "image_${local.image_major_version}.${local.image_minor_version}.${local.image_patch_version}"
   
   # Lambda Configuration
